@@ -13,9 +13,9 @@
 
 }
 
-.sidebar {
+/* .sidebar {
   grid-area: left;
-}
+} */
 
 .clients {
   grid-area: right;
