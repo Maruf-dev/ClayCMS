@@ -27,7 +27,7 @@ function DefaultSidebar() {
         </div>
 
         <List className="">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col">
             {navs.map((n) => (
               <ListItem className="">
                 <NavLink
@@ -35,7 +35,7 @@ function DefaultSidebar() {
                   className={({ isActive }) =>
                     isActive
                       ? "bg-blue-400 w-full p-2 text-white rounded"
-                      : "w-full text-black rounded "
+                      : "w-full p-2 text-black rounded "
                   }
                 >
                   {n.name}
