@@ -6,40 +6,40 @@ import { Link } from "react-router-dom";
 function Clients() {
   return (
     <div className="clients">
-      <Header name="Client"/>
+      <Header name="Client" buttons={["+"]}/>
 
       <div className="relative overflow-x-auto">
 
-      <Link to="gdrndrtdrt">c321c312c3</Link> 
-        <table className="w-full text-sm text-left tableBorder">
+      {/* <Link to="1">c321c312c3</Link>  */}
+        <table className="w-full text-sm text-left">
           <thead className="text-xs text-black">
             <tr className="">
               <th scope="col" className="px-6 py-3">
-                Product name
+                #
               </th>
               <th scope="col" className="px-6 py-3">
-                Color
+                Name
               </th>
               <th scope="col" className="px-6 py-3">
-                Category
+                Region
               </th>
               <th scope="col" className="px-6 py-3">
-                Price
+                Product type
               </th>
               <th scope="col" className="px-6 py-3">
-                Price
+                Factory capacity
               </th>
               <th scope="col" className="px-6 py-3">
-                Price
+                Dipsatched for Quarter
               </th>
               <th scope="col" className="px-6 py-3">
-                Price
+                Dispasched Total
               </th>
               <th scope="col" className="px-6 py-3">
-                Price
+                Status
               </th>
               <th scope="col" className="px-6 py-3">
-                Price
+                Action
               </th>
             </tr>
           </thead>
@@ -49,33 +49,112 @@ function Clients() {
                 scope="row"
                 className="px-6 py-4 font-medium whitespace-nowrap"
               >
-                Apple MacBook Pro 17"
+                1
               </th>
-              <td className="px-6 py-4">Silver</td>
-              <td className="px-6 py-4">Laptop</td>
-              <td className="px-6 py-4">$2999</td>
+              <td className="px-6 py-4"><Link to="Manafactured Company LTD">Manafactured Company LTD</Link> </td>
+              <td className="px-6 py-4">Sirdaryo</td>
+              <td className="px-6 py-4">Edible oil</td>
+              <td className="px-6 py-4">15 000</td>
+              <td className="px-6 py-4">1 000</td>
+              <td className="px-6 py-4">5 000</td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4">Delete</td>
+            </tr>
+            <tr className="bg-white border dark:border-black">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium whitespace-nowrap"
+              >
+                
+              </th>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+            </tr>
+            <tr className="bg-white border dark:border-black">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium whitespace-nowrap"
+              >
+                
+              </th>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
             </tr>
             <tr className="bg-white border dark:border-black">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium whitespace-nowrap "
               >
-                Microsoft Surface Pro
+                
               </th>
-              <td className="px-6 py-4">White</td>
-              <td className="px-6 py-4">Laptop PC</td>
-              <td className="px-6 py-4">$1999</td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
             </tr>
             <tr className="bg-white dark:border-black">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
               >
-                Magic Mouse 2
+                
               </th>
-              <td className="px-6 py-4">Black</td>
-              <td className="px-6 py-4">Accessories</td>
-              <td className="px-6 py-4">$99</td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+            </tr>
+            <tr className="bg-white dark:border-black">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
+              >
+                
+              </th>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+            </tr>
+            <tr className="bg-white dark:border-black">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
+              >
+                
+              </th>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
+              <td className="px-6 py-4"></td>
             </tr>
           </tbody>
         </table>

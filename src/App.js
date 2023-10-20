@@ -13,18 +13,19 @@ import ClientById from "./components/clients/ClientById";
 function App() {
   return (
     <BrowserRouter>
-      <div className="wrapper">
+      <div className="flex">
         <DefaultSidebar />
-
-        <Routes>
-          <Route path="/clients" element={<Clients />}>
-            <Route index element={<ClientsList />} />
-            <Route path=":id" element={<ClientById />} />
-          </Route>
-          <Route path="/regions" element={<Regions />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/users" element={<Users />} />
-        </Routes>
+        <div className="border w-full p-2">
+          <Routes>
+            <Route path="/clients" element={<Clients />}>
+              <Route index element={<ClientsList />} />
+              <Route path=":id" element={<ClientById />} />
+            </Route>
+            <Route path="/regions" element={<Regions />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/users" element={<Users />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );

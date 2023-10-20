@@ -2,22 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* 
 .wrapper {
   display: grid;
-  /* grid-template-rows: 60px 1fr; */
+  grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
-  /* grid-gap: 10px; */
+  grid-gap: 10px;
 
   grid-template-areas: "left right";
 
-}
+} */
 
 /* .sidebar {
   grid-area: left;
 } */
 
-.clients {
+/* .clients {
   grid-area: right;
 }
 
@@ -31,4 +31,4 @@
 
 .users{
   grid-area: right;
-}
+} */

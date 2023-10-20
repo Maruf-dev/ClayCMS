@@ -1,11 +1,7 @@
-import React, { useState } from "react";
+import React  from "react";
 
 import { Card, Typography, List, ListItem } from "@material-tailwind/react";
-import { NavLink, Route, Routes } from "react-router-dom";
-import Clients from "./clients/Clients";
-import Regions from "./Regions";
-import Products from "./Products";
-import Users from "./Users";
+import { NavLink} from "react-router-dom";
 
 function DefaultSidebar() {
   const navs = [
@@ -16,7 +12,7 @@ function DefaultSidebar() {
   ];
   return (
     <>
-      <Card className="h-screen w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 flex flex-col">
+      <Card className="h-screen w-full max-w-[20rem] p-2 shadow-xl shadow-blue-gray-900/5 flex flex-col">
         <div className="mb-2 p-4 ">
           <Typography
             variant="h5"
@@ -39,7 +35,7 @@ function DefaultSidebar() {
                   className={({ isActive }) =>
                     isActive
                       ? "bg-blue-400 w-full p-2 text-white rounded"
-                      : "w-full p-2 text-black rounded "
+                      : "w-full text-black rounded "
                   }
                 >
                   {n.name}
@@ -47,9 +43,9 @@ function DefaultSidebar() {
               </ListItem>
             ))}
           </div>
-          <div className="bottom-side">
+          <div className="bottom-side mt-48">
             <hr className="my-2 border-blue-gray-50" />
-            <ListItem className="active:bg-sky-500 rounded ">History</ListItem>
+            <ListItem className="active:bg-sky-500 rounded">History</ListItem>
             <ListItem className="active:bg-sky-500 rounded">Log Out</ListItem>
           </div>
         </List>
