@@ -1,13 +1,17 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
+import Header from './../Header';
+import "./ClientById.css"
 export default function ClientById() {
   const { id } = useParams();
 
   return (
     <>
-      <div className="clinet-card border rounded p-3">
-        <h1>Client: {id}</h1>
+      <div className="p-3 border border-black" >
+        <div className="">
+          <h2>Client: {id}</h2>
+          <Header name={""} buttons={["x"]}/>
+        </div>
         <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-400" />
         <table className="w-full text-sm text-left tableBorder">
           <thead className="text-xs text-black">
@@ -48,6 +52,11 @@ export default function ClientById() {
             </tr>
           </thead>
         </table>
+        <div className="clientId__buttons">
+        <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-90  font-medium rounded-lg text-sm px-4 py-1 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Edit</button>
+
+        <button type="button" class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800  font-medium rounded-lg text-sm px-4 py-1 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">Delete</button>
+        </div>
       </div>
       <div className="p-3 border border-black rounded mt-4">
         <h2 className="font-bold text-2xl pb-64">Chat</h2>

@@ -2,11 +2,14 @@ import React from "react";
 import "./Clients.css";
 import Header from "./../Header";
 import { Link } from "react-router-dom";
+import {TiMessages} from "react-icons/ti";
+
 
 function Clients() {
   return (
     <div className="clients">
       <Header name="Client" buttons={["+"]}/>
+      
 
       <div className="relative overflow-x-auto">
 
@@ -159,6 +162,7 @@ function Clients() {
           </tbody>
         </table>
       </div>
+      <TiMessages size={40} className="timessage hover:bg-slate-200 focus:ring-blue-300 rounded-ss"/>
     </div>
   );
 }

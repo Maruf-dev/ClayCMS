@@ -4,3 +4,10 @@ td,
 tr {
   border: 1px solid black;
 }
+
+.timessage{
+  cursor: pointer;
+  position:fixed;
+  bottom: 30px;
+  right: 30px;
+}

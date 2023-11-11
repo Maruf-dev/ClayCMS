@@ -5,7 +5,7 @@ import { HiOutlineUsers } from "react-icons/hi2";
 
 function Regions() {
   const regions = [
-    { country: "Uzbekistan",clients: 0 },
+    { country: "Uzbekistan",clients: 0,},
     { country: "Kyrgzstan",clients: 0 },
     { country: "Kazakhstan", clients: 18, sales: [3, 12, 0, 0] },
     { country: "Turkey",clients: 0 },

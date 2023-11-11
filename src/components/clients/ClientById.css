@@ -1,0 +1,8 @@
+.clientId__buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.clientId__buttons button{
+    margin-top: 9px;
+}
