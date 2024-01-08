@@ -9,24 +9,25 @@ import Regions from "./components/Regions";
 import Products from "./components/Products";
 import Users from "./components/Users";
 import ClientById from "./components/clients/ClientById";
+import Auth from "./components/pages/Auth";
+import Register from "./components/pages/Register";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex">
-        <DefaultSidebar />
-        <div className="border w-full p-2">
-          <Routes>
-            <Route path="/clients" element={<Clients />}>
-              <Route index element={<ClientsList />} />
-              <Route path=":id" element={<ClientById />} />
-            </Route>
-            <Route path="/regions" element={<Regions />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/users" element={<Users />} />
-          </Routes>
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Auth />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+      <Routes>
+        <Route path="/sidebar" element={<DefaultSidebar />}>
+          <Route path="clients" element={<ClientsList />} />
+          <Route path="clients/:id" element={<ClientById />} />
+          <Route path="regions" element={<Regions />} />
+          <Route path="products" element={<Products />} />
+          <Route path="users" element={<Users />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

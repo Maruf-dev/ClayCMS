@@ -1,17 +1,17 @@
-import React  from "react";
+import React from "react";
 
 import { Card, Typography, List, ListItem } from "@material-tailwind/react";
-import { NavLink} from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 function DefaultSidebar() {
   const navs = [
-    { link: "/regions", name: "Regions" },
-    { link: "/clients", name: "Clients" },
-    { link: "/products", name: "Products" },
-    { link: "/users", name: "Users" },
+    { link: "/sidebar/regions", name: "Regions" },
+    { link: "/sidebar/clients", name: "Clients" },
+    { link: "/sidebar/products", name: "Products" },
+    { link: "/sidebar/users", name: "Users" },
   ];
   return (
-    <>
+    <div className="flex">
       <Card className="h-screen w-full max-w-[20rem] p-2 shadow-xl shadow-blue-gray-900/5 flex flex-col">
         <div className="mb-2 p-4 ">
           <Typography
@@ -50,7 +50,10 @@ function DefaultSidebar() {
           </div>
         </List>
       </Card>
-    </>
+      <div className="border w-full p-2">
+        <Outlet />
+      </div>
+    </div>
   );
 }
 

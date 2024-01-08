@@ -26,11 +26,11 @@ function Regions() {
                 className="block  p-6"
               >
                 <p className="h-28 font-normal text-gray-700 dark:text-gray-900">
-                  {region.country}
+                    
                 </p>
                 <div className="calc">
                   <div className="wrap-user-total flex gap-3">
-                    <div className="total-users inline-flex inline-block gap-1 border rounded p-2">
+                    <div className="total-users inline-flex gap-1 border rounded p-2">
                       {" "}
                       <HiOutlineUsers size={20}/> {region.clients}
                     </div>
