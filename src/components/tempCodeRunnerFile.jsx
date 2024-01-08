@@ -1,1 +1,0 @@
-console.log(regions.sales[0])

@@ -1,11 +1,11 @@
 import React from "react";
 
 import { Card, Typography, List, ListItem } from "@material-tailwind/react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 function DefaultSidebar() {
   const navs = [
-    { link: "/sidebar/regions", name: "Regions" },
+    { link: "/sidebar", name: "Regions" },
     { link: "/sidebar/clients", name: "Clients" },
     { link: "/sidebar/products", name: "Products" },
     { link: "/sidebar/users", name: "Users" },
@@ -46,7 +46,11 @@ function DefaultSidebar() {
           <div className="bottom-side mt-48">
             <hr className="my-2 border-blue-gray-50" />
             <ListItem className="active:bg-sky-500 rounded">History</ListItem>
-            <ListItem className="active:bg-sky-500 rounded">Log Out</ListItem>
+            <ListItem className="active:bg-sky-500 rounded">
+              <Link to={"/"} className="active:bg-sky-500 rounded">
+                Log Out
+              </Link>
+            </ListItem>
           </div>
         </List>
       </Card>

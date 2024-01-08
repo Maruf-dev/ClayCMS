@@ -23,7 +23,7 @@ function App() {
         <Route path="/sidebar" element={<DefaultSidebar />}>
           <Route path="clients" element={<ClientsList />} />
           <Route path="clients/:id" element={<ClientById />} />
-          <Route path="regions" element={<Regions />} />
+          <Route path="" element={<Regions />} />
           <Route path="products" element={<Products />} />
           <Route path="users" element={<Users />} />
         </Route>
