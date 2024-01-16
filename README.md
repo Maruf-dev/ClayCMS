@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+      // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<Auth />} />
+    //     <Route path="/register" element={<Register />} />
+    //   </Routes>
+    //   <Routes>
+    //     <Route path="/sidebar" element={<DefaultSidebar />}>
+    //       <Route path="clients" element={<ClientsList />} />
+    //       <Route path="clients/:id" element={<ClientById />} />
+    //       <Route path="" element={<Regions />} />
+    //       <Route path="products" element={<Products />} />
+    //       <Route path="users" element={<Users />} />
+    //     </Route>
+    //   </Routes>
+    // </BrowserRouter>  https://stackoverflow.com/questions/74566649/createbrowserrouter-how-to-nest-child-routes-inside-another-route-that-itself-is

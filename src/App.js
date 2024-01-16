@@ -1,35 +1,62 @@
 import React from "react";
 // import { ReactDOM } from 'react';
 import "./App.css";
+import {
+  BrowserRouter,
+  Outlet,
+  Route,
+  RouterProvider,
+  Routes,
+  createBrowserRouter,
+} from "react-router-dom";
 import DefaultSidebar from "./components/DefaultSidebar";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Clients from "./components/clients";
-import ClientsList from "./components/clients/Clients";
-import Regions from "./components/Regions";
-import Products from "./components/Products";
-import Users from "./components/Users";
-import ClientById from "./components/clients/ClientById";
-import Auth from "./components/pages/Auth";
-import Register from "./components/pages/Register";
+import Regions from "./pages/regions/Regions";
+import Products from "./pages/products/Products";
+import Users from "./pages/users/Users";
+import Auth from "./pages/register/Auth";
+import Register from "./pages/register/Register";
+import Layout from "./components/Layout";
+
+// import data from "./api/data";
+import Clients from './pages/clients/Clients';
+import ClientById from './pages/clients/ClientById';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "regions",
+        element: <Regions />,
+      },
+      {
+        path: "clients",
+        element: <Clients />,
+
+      },
+      {
+        path: "clients/:id",
+        element: <ClientById />,
+      },
+      {
+        path: "products",
+        element: <Products />,
+      },
+      {
+        path: "users",
+        element: <Users />,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <Auth />,
+  },
+]);
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Auth />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-      <Routes>
-        <Route path="/sidebar" element={<DefaultSidebar />}>
-          <Route path="clients" element={<ClientsList />} />
-          <Route path="clients/:id" element={<ClientById />} />
-          <Route path="" element={<Regions />} />
-          <Route path="products" element={<Products />} />
-          <Route path="users" element={<Users />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

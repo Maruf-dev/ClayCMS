@@ -1,6 +1,6 @@
 import React from "react";
 import "./Regions.css";
-import Header from "./Header";
+import Header from "../../components/Header";
 import { HiOutlineUsers } from "react-icons/hi2";
 
 function Regions() {

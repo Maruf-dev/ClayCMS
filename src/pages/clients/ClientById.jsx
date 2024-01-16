@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Header from './../Header';
+import Header from '../../components/Header';
 import "./ClientById.css"
 export default function ClientById() {
   const { id } = useParams();

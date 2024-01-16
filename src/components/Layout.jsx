@@ -1,8 +1,11 @@
 import React from "react";
 import DefaultSidebar from "./DefaultSidebar";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
 export default function Layout() {
+  const token = localStorage.getItem('token');
+  if(!token) return <Navigate to="/login" />
+
   return (
     <div>
       <div className="flex">

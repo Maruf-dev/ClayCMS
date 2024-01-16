@@ -1,6 +1,6 @@
 import React from "react";
 import "./Clients.css";
-import Header from "./../Header";
+import Header from "../../components/Header";
 import { Link } from "react-router-dom";
 import {TiMessages} from "react-icons/ti";
 

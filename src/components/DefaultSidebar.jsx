@@ -1,18 +1,28 @@
 import React from "react";
 
 import { Card, Typography, List, ListItem } from "@material-tailwind/react";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 function DefaultSidebar() {
   const navs = [
-    { link: "/sidebar", name: "Regions" },
-    { link: "/sidebar/clients", name: "Clients" },
-    { link: "/sidebar/products", name: "Products" },
-    { link: "/sidebar/users", name: "Users" },
+    { link: "/regions", name: "Regions" },
+    { link: "/clients", name: "Clients" },
+    { link: "/products", name: "Products" },
+    { link: "/users", name: "Users" },
   ];
+
+  const navigate = useNavigate();
+
+  const handlelogOut = async () => {
+    // await /////
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
+
   return (
     <div className="flex">
-      <Card className="h-screen w-full max-w-[20rem] p-2 shadow-xl shadow-blue-gray-900/5 flex flex-col">
+      <Card className="h-screen w-full w-[20rem] p-2 shadow-xl shadow-blue-gray-900/5 flex flex-col">
         <div className="mb-2 p-4 ">
           <Typography
             variant="h5"
@@ -47,16 +57,16 @@ function DefaultSidebar() {
             <hr className="my-2 border-blue-gray-50" />
             <ListItem className="active:bg-sky-500 rounded">History</ListItem>
             <ListItem className="active:bg-sky-500 rounded">
-              <Link to={"/"} className="active:bg-sky-500 rounded">
+              <Link
+                onClick={handlelogOut}
+                className="active:bg-sky-500 rounded"
+              >
                 Log Out
               </Link>
             </ListItem>
           </div>
         </List>
       </Card>
-      <div className="border w-full p-2">
-        <Outlet />
-      </div>
     </div>
   );
 }
