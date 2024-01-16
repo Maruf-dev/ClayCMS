@@ -25,7 +25,6 @@ export default function Auth() {
       }
       
       navigate("/regions");
-      // alert("Login successful!");
       console.log("Login successful!", response.data);
     } catch (err) {
       setError("Invalid username or password");
