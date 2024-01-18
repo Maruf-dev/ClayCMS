@@ -22,7 +22,7 @@ function DefaultSidebar() {
 
   return (
     <div className="flex">
-      <Card className="h-screen w-full w-[20rem] p-2 shadow-xl shadow-blue-gray-900/5 flex flex-col">
+      <Card className="h-screen w-[20rem] p-2 shadow-xl shadow-blue-gray-900/5 flex flex-col">
         <div className="mb-2 p-4 ">
           <Typography
             variant="h5"
@@ -38,8 +38,8 @@ function DefaultSidebar() {
 
         <List className="">
           <div className="flex flex-col">
-            {navs.map((n) => (
-              <ListItem className="">
+            {navs.map((n, i) => (
+              <ListItem className="" key={i}>
                 <NavLink
                   to={n.link}
                   className={({ isActive }) =>

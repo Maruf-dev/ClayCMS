@@ -4,7 +4,7 @@ import { Navigate, Outlet } from "react-router-dom";
 
 export default function Layout() {
   const token = localStorage.getItem('token');
-  if(!token) return <Navigate to="/login" />
+  // if(!token) return <Navigate to="/login" />
 
   return (
     <div>

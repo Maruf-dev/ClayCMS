@@ -2,18 +2,15 @@ import React from "react";
 import "./Clients.css";
 import Header from "../../components/Header";
 import { Link } from "react-router-dom";
-import {TiMessages} from "react-icons/ti";
-
+import { TiMessages } from "react-icons/ti";
 
 function Clients() {
   return (
     <div className="clients">
-      <Header name="Client" buttons={["+"]}/>
-      
+      <Header name="Client" buttons={["+"]} />
 
       <div className="relative overflow-x-auto">
-
-      {/* <Link to="1">c321c312c3</Link>  */}
+        {/* <Link to="1">c321c312c3</Link>  */}
         <table className="w-full text-sm text-left">
           <thead className="text-xs text-black">
             <tr className="">
@@ -54,22 +51,32 @@ function Clients() {
               >
                 1
               </th>
-              <td className="px-6 py-4"><Link to="Manafactured Company LTD">Manafactured Company LTD</Link> </td>
+              <td className="px-6 py-4">
+                <Link to="Manafactured Company LTD">
+                  Manafactured Company LTD
+                </Link>{" "}
+              </td>
               <td className="px-6 py-4">Sirdaryo</td>
               <td className="px-6 py-4">Edible oil</td>
               <td className="px-6 py-4">15 000</td>
               <td className="px-6 py-4">1 000</td>
               <td className="px-6 py-4">5 000</td>
               <td className="px-6 py-4"></td>
-              <td className="px-6 py-4">Delete</td>
+              <td className="px-6 py-4">
+                {" "}
+                <button
+                  type="button"
+                  class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800  font-medium rounded-lg text-sm px-4 py-1 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
             <tr className="bg-white border dark:border-black">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium whitespace-nowrap"
-              >
-                
-              </th>
+              ></th>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
@@ -83,9 +90,7 @@ function Clients() {
               <th
                 scope="row"
                 className="px-6 py-4 font-medium whitespace-nowrap"
-              >
-                
-              </th>
+              ></th>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
@@ -99,9 +104,7 @@ function Clients() {
               <th
                 scope="row"
                 className="px-6 py-4 font-medium whitespace-nowrap "
-              >
-                
-              </th>
+              ></th>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
@@ -115,9 +118,7 @@ function Clients() {
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
-              >
-                
-              </th>
+              ></th>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
@@ -131,9 +132,7 @@ function Clients() {
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
-              >
-                
-              </th>
+              ></th>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
@@ -147,9 +146,7 @@ function Clients() {
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
-              >
-                
-              </th>
+              ></th>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
               <td className="px-6 py-4"></td>
@@ -162,7 +159,10 @@ function Clients() {
           </tbody>
         </table>
       </div>
-      <TiMessages size={40} className="timessage hover:bg-slate-200 focus:ring-blue-300 rounded-ss"/>
+      <TiMessages
+        size={40}
+        className="timessage hover:bg-slate-200 focus:ring-blue-300 rounded-ss"
+      />
     </div>
   );
 }

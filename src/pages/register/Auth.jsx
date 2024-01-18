@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,7 @@ export default function Auth() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  const baseURL = "https://ox-polished-infinitely.ngrok-free.app";
+  // const baseURL = "https://ox-polished-infinitely.ngrok-free.app";
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -18,7 +18,7 @@ export default function Auth() {
       formData.append('username', username);
       formData.append('password', password);
     
-      const response = await axios.post(`${baseURL}/api/v1/auth/token`, formData);
+      const response = await axios.post('/api/v1/auth/token', formData);
       localStorage.setItem("token",response.data.access_token)
       console.log(response);
       if(response.ok){

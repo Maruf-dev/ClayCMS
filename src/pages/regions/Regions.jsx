@@ -12,15 +12,22 @@ function Regions() {
     { country: "Georgia",clients: 0 },
     { country: "Estonia",clients: 0 },
   ];
-  
+  const handleCreateRG = () =>{
+    console.log("handleCreateRG");
+  }
+  const handleDelRG = () =>{
+    console.log("handleDelRG");
+  }
+
+
   return (
     <>
     
       <div className="flex flex-col">
-        <Header name="Regions" buttons={["+","-"]}/>
+        <Header name="Regions" buttons={[{ name: ["+"], click: handleCreateRG},{ name: ["-"], click: handleDelRG}]}/>
         <div className="flex flex-wrap gap-2 p-2">
-          {regions.map((region) => (
-            <div className="border w-80 h-60 hover:bg-gray-100 bg-white border-gray-200 rounded-lg">
+          {regions.map((region,i) => (
+            <div key={i} className="border w-80 h-60 hover:bg-gray-100 bg-white border-gray-200 rounded-lg">
               <a
                 href="/"
                 className="block  p-6"
